@@ -2,5 +2,13 @@
 
 {% block content%}
 <h1>Hello {{name}}</h1>
+<form action="data" method="post">
 
+ {%csrf_token%}
+    Enter the NameID : <input type="text" name="nameId"><br/>
+    Enter the schoolmail : <input type="text" name="email"><br/>
+    <input type="submit">
+
+
+</form>
 {%  endblock %}
